@@ -45,9 +45,8 @@ img {
     transition: background-color 0.3s ease-in-out;
 }
 .navbar img {
-    width: 100px;
-    height: 100px;
-    
+    width: 81px;
+    height: 32px;
 }
 .navbar-flex{
     display: flex;
