@@ -1,3 +1,14 @@
-inIt()
+function init() {
+    const toggleButton = document.querySelector('.navbar .mobile-menu-toggle');
+    // console.log(toggleButton);
+    const mobileMenu = document.querySelector('.navbar .mobile-menu-items');
+    // console.log(mobileMenu);
 
-document.activeElement('DOMContentLoaded', inIt)
+    toggleButton.addEventListener('click',function () {
+        mobileMenu.classList.toggle('active');
+    })
+    
+    
+}
+
+document.addEventListener('DOMContentLoaded', init);
