@@ -1,42 +1,50 @@
 *,
 *::before,
-*::after{
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html,
-body{
-    background: blanchedalmond;
+body {
+    /* background: url(../img/ChatGPT\ Image\ Oct\ 18\,\ 2025\,\ 03_45_54\ PM.png); */
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 li {
     list-style: none;
 }
+
 img {
     max-width: 100%;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
-.container-sm{
+
+.container-sm {
     /* background: blue; */
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 2rem;
+    /* position: f; */
 }
+
 /* nav */
 .navbar {
     background: black;
     color: #fff;
-    padding:1rem 2rem;
+    padding: 1rem 2rem;
     position: fixed;
     top: 0;
     right: 0;
@@ -44,38 +52,47 @@ img {
     z-index: 1000;
     transition: background-color 0.3s ease-in-out;
 }
+
 .navbar img {
     width: 81px;
     height: 32px;
 }
-.navbar-flex{
+
+.navbar-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .navbar .main-menu-list {
     display: flex;
-   align-items: center;
-    gap:  2rem;
+    align-items: center;
+    gap: 2rem;
     font-weight: 600;
 }
+
 .navbar a {
     color: #fff;
 }
+
 .navbar a:hover {
     color: gray;
 }
+
 .navbar i {
     font-size: 1.7rem;
 }
+
 /* mobile menu */
 .navbar .mobile-menu {
     display: none;
 }
+
 .navbar .mobile-menu-toggle {
     color: #fff;
     cursor: pointer;
 }
+
 .navbar .mobile-menu-items {
     position: absolute;
     top: 100%;
@@ -90,38 +107,55 @@ img {
     transform: translateX(100%);
     transition: transform 0.3s ease;
 }
+
 .navbar .mobile-menu-items.active {
     transform: translateX(0);
 }
-.navbar .mobile-menu-list{
+
+.navbar .mobile-menu-list {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     font-size: 1.2rem;
 }
 
+/* Hero */
+.hero {
+    background: #000 url(../img/ChatGPT\ Image\ Oct\ 18\,\ 2025\,\ 03_45_54\ PM.png)center center/cover no-repeat;
+    padding: 11.5rem 2rem 8rem;
+    overflow-x: hidden;
+    position: relative;
+    color: #fff;
+}
+
+.hero-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 8rem;
+}
+
 
 /* Media Queries */
-@media (max-width: 1200px) {
-    
-    
-}
-@media (max-width: 992px) {
-    
-}
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {}
+
 @media (max-width: 768px) {
     .main-menu-items {
         display: none;
     }
+
     .navbar .mobile-menu {
         display: block;
     }
+
     .navbar .mobile-menu-toggle {
         display: block;
         padding: 10px;
     }
-    
+
 }
-@media (max-width: 576px) {
-    
-}
+
+@media (max-width: 576px) {}

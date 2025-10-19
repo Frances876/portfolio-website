@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamond Star Background</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: transparent; /* Keeps transparency */
+  }
+
+  .diamond {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle at 30% 30%, #fff6d1, #ffd77a 40%, transparent 80%);
+    transform: rotate(45deg);
+    border-radius: 4px;
+    opacity: 0.85;
+    animation: float 25s linear infinite, twinkle 3s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 8px rgba(255, 225, 150, 0.8));
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0) rotate(45deg); }
+    50% { transform: translateY(-40px) rotate(45deg); }
+    100% { transform: translateY(0) rotate(45deg); }
+  }
+
+  @keyframes twinkle {
+    0% { opacity: 0.7; transform: scale(1) rotate(45deg); }
+    50% { opacity: 1; transform: scale(1.1) rotate(45deg); }
+    100% { opacity: 0.75; transform: scale(1) rotate(45deg); }
+  }
+</style>
+</head>
+<body>
+<script>
+const numDiamonds = 10; // Adjust number of diamonds
+for (let i = 0; i < numDiamonds; i++) {
+  const d = document.createElement('div');
+  d.className = 'diamond';
+  d.style.left = Math.random() * 100 + 'vw';
+  d.style.top = Math.random() * 100 + 'vh';
+  d.style.width = d.style.height = (Math.random() * 12 + 12) + 'px';
+  d.style.animationDuration = (20 + Math.random() * 10) + 's, ' + (2 + Math.random() * 3) + 's';
+  d.style.animationDelay = Math.random() * 5 + 's';
+  document.body.appendChild(d);
+}
+</script>
+</body>
+</html>
