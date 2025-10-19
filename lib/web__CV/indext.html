@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Your Name] — Web Developer</title>
+  <meta name="description" content="Professional web developer CV — HTML, CSS, JavaScript." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Aa9mG6..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <style>
+    :root{
+      --accent:#1f8ef1;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#fbfdff;
+      --max-width:1000px;
+      --radius:12px;
+      --glass: rgba(31,142,241,0.08);
+      color-scheme: light;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.45}
+    .container{max-width:var(--max-width);margin:40px auto;padding:24px}
+
+    /* Header */
+    .header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .avatar{width:84px;height:84px;border-radius:16px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:32px}
+    .name-title{display:flex;flex-direction:column}
+    h1{margin:0;font-size:1.5rem}
+    p.tag{margin:0;color:var(--muted);font-weight:600}
+
+    .top-actions{display:flex;gap:8px;align-items:center}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-flex;gap:8px;align-items:center}
+    .btn.secondary{background:transparent;color:var(--accent);border:1px solid var(--glass);font-weight:600}
+
+    /* Grid layout */
+    .grid{display:grid;grid-template-columns: 1fr 320px;gap:28px;margin-top:26px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+    /* Card */
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(12,18,31,0.06)}
+
+    /* Section titles */
+    .section-title{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+    .section-title h2{margin:0;font-size:1.05rem}
+    .muted{color:var(--muted)}
+
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:600;color:var(--accent);font-size:0.9rem}
+
+    /* Projects */
+    .projects{display:grid;gap:12px}
+    .project{display:flex;gap:12px;align-items:center}
+    .project img{width:80px;height:60px;object-fit:cover;border-radius:8px}
+    .project .meta{font-size:0.95rem}
+
+    /* Experience / Education */
+    .item{margin-bottom:14px}
+    .item h3{margin:0;font-size:1rem}
+    .item .meta{color:var(--muted);font-size:0.95rem}
+
+    /* Contact */
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    .contact-list a{color:inherit;text-decoration:none}
+
+    /* Footer */
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    /* Print friendly */
+    @media print{
+      body{background:white}
+      .btn, .top-actions{display:none}
+      .container{margin:0;padding:0}
+    }
+
+    /* Small niceties */
+    .divider{height:1px;background:linear-gradient(90deg, rgba(15,23,42,0.03), rgba(15,23,42,0.06));margin:18px 0;border-radius:2px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="avatar">C</div>
+        <div class="name-title">
+          <h1>[Your Full Name]</h1>
+          <p class="tag">Web Developer — HTML • CSS • JavaScript</p>
+          <p class="muted">[City, Country] • <a href="mailto:you@example.com">you@example.com</a> • +234 000 000 000</p>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <a class="btn" id="downloadPdf" href="#"><i class="fa-solid fa-download"></i> Download PDF</a>
+        <a class="btn secondary" id="viewPortfolio" href="#projects"><i class="fa-solid fa-folder-open"></i> Portfolio</a>
+      </div>
+    </header>
+
+    <main class="grid">
+      <!-- Left Column -->
+      <section>
+        <div class="card">
+          <div class="section-title"><h2>Professional Summary</h2></div>
+          <p>Creative and detail-oriented Web Developer with strong experience building responsive, accessible websites using HTML, CSS, and JavaScript. Adept at translating designs into clean, maintainable code and improving user experience across devices.</p>
+
+          <div class="divider"></div>
+
+          <div class="section-title"><h2>Skills</h2></div>
+          <div class="skills">
+            <span class="skill">HTML5</span>
+            <span class="skill">CSS3</span>
+            <span class="skill">JavaScript (ES6+)</span>
+            <span class="skill">Responsive Design</span>
+            <span class="skill">Git & GitHub</span>
+            <span class="skill">APIs / Fetch</span>
+            <span class="skill">Accessibility (a11y)</span>
+            <span class="skill">Cross-Browser</span>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="section-title"><h2>Projects</h2></div>
+          <div class="projects">
+            <div class="project">
+              <img src="https://images.unsplash.com/photo-1523475496153-3d6ccf5b2f6e?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=abc" alt="Movie App">
+              <div class="meta">
+                <strong>Movie Discovery App</strong>
+                <div class="muted">HTML • CSS • JavaScript • TMDb API</div>
+                <div class="muted">Features: responsive UI, trailer embeds, search & filters</div>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="https://images.unsplash.com/photo-1483389127115-0f98c3d5b9f4?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=def" alt="Portfolio">
+              <div class="meta">
+                <strong>Personal Portfolio</strong>
+                <div class="muted">HTML • CSS • JavaScript</div>
+                <div class="muted">Features: responsive layout, contact form, smooth scrolling</div>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="https://images.unsplash.com/photo-1520975911716-0f8f4b6d4e6a?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=ghi" alt="Todo App">
+              <div class="meta">
+                <strong>To-Do Web App</strong>
+                <div class="muted">JavaScript • LocalStorage</div>
+                <div class="muted">Features: add/edit/delete tasks, persistent storage</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="section-title"><h2>Experience</h2></div>
+          <div class="item">
+            <h3>Front-End Developer (Intern)</h3>
+            <div class="meta">Company Name — Jun 2024 to Aug 2024</div>
+            <p>Collaborated with designers to implement responsive components, optimized asset loading, and improved accessibility across key pages.</p>
+          </div>
+
+          <div class="item">
+            <h3>Freelance Web Developer</h3>
+            <div class="meta">Self-Employed — 2023 to Present</div>
+            <p>Built small business websites, landing pages and prototypes for clients using modern HTML, CSS and vanilla JavaScript.</p>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="section-title"><h2>Education</h2></div>
+          <div class="item">
+            <h3>[Your University / Bootcamp]</h3>
+            <div class="meta">Diploma / Degree — Year</div>
+            <p>Relevant coursework: Web Development, Algorithms, Responsive Design</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column (sidebar) -->
+      <aside>
+        <div class="card">
+          <div class="section-title"><h2>Contact</h2></div>
+          <div class="contact-list">
+            <div><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></div>
+            <div><strong>Phone:</strong> +234 000 000 000</div>
+            <div><strong>Location:</strong> [City, Country]</div>
+            <div><strong>GitHub:</strong> <a href="#">github.com/yourusername</a></div>
+            <div><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/yourname</a></div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="section-title"><h2>Languages</h2></div>
+          <div class="muted">English (Fluent)</div>
+
+          <div class="divider"></div>
+
+          <div class="section-title"><h2>Tools</h2></div>
+          <div class="skills">
+            <span class="skill">VS Code</span>
+            <span class="skill">Git</span>
+            <span class="skill">Chrome DevTools</span>
+            <span class="skill">Figma (basic)</span>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="section-title"><h2>Availability</h2></div>
+          <div class="muted">Open to full-time & freelance opportunities</div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Made with ❤ • Web Developer — HTML, CSS, JavaScript</p>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scrolling to anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if(href === '#') return;
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({behavior:'smooth'});
+      });
+    });
+
+    // Download as PDF (simple print-based approach)
+    document.getElementById('downloadPdf').addEventListener('click', function(e){
+      e.preventDefault();
+      window.print();
+    });
+
+    // Replace placeholders with prompt (optional helper)
+    // You can remove this block if you prefer manual editing.
+    (function fillPlaceholders(){
+      const nameEl = document.querySelector('h1');
+      if(nameEl && nameEl.textContent.includes('[Your')){
+        nameEl.contentEditable = true;
+        nameEl.title = 'Click to edit name';
+      }
+      // Make contact fields editable
+      document.querySelectorAll('.contact-list a[href^="#"]').forEach(a=> a.contentEditable = true);
+    })();
+  </script>
+</body>
+</html>
